@@ -1,0 +1,2 @@
+C:\Users\nguye\source\repos\Semester 3 OOP\midterm\partD\midter\Debug\midter.exe
+C:\Users\nguye\source\repos\Semester 3 OOP\midterm\partD\midter\Debug\midter.pdb

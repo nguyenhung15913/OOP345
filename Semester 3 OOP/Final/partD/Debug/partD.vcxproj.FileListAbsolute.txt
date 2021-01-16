@@ -1,0 +1,2 @@
+C:\Users\nguye\source\repos\Semester 3 OOP\Final\partD\Debug\partD.exe
+C:\Users\nguye\source\repos\Semester 3 OOP\Final\partD\Debug\partD.pdb

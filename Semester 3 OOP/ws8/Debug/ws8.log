@@ -1,0 +1,6 @@
+﻿  Utilities.cpp
+C:\Users\nguye\source\repos\Semester 3 OOP\ws8\Utilities.cpp(17,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\nguye\source\repos\Semester 3 OOP\ws8\Utilities.cpp(19,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\nguye\source\repos\Semester 3 OOP\ws8\Utilities.cpp(38,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\nguye\source\repos\Semester 3 OOP\ws8\Utilities.cpp(40,23): warning C4018: '<': signed/unsigned mismatch
+  ws8.vcxproj -> C:\Users\nguye\source\repos\Semester 3 OOP\ws8\Debug\ws8.exe

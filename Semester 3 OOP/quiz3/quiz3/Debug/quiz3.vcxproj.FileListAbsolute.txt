@@ -1,0 +1,2 @@
+C:\Users\nguye\source\repos\Semester 3 OOP\quiz3\quiz3\Debug\quiz3.exe
+C:\Users\nguye\source\repos\Semester 3 OOP\quiz3\quiz3\Debug\quiz3.pdb

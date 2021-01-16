@@ -1,0 +1,22 @@
+Reflection
+This workshop was very challenging for me. It took me a lot of hours to finish. The first problem was reading the .txt file provided. I had to read a lot of materials not only from Seneca ICT, but also those from Google. The biggest problem is that if you don’t use getline function with the char delimiter (‘ ‘), the complier will read a single character instead of a word. And if you don’t use the space delimiter in your argument, the compiler will try to read a number of words before It reaches the newline. On top of that, when you do a while loop when copying the string from the file to your data member, you need to use prefix increment to your index, otherwise, all the array elements of your array will have the same output which is the first word of the file. For example:
+while (!f.eof()) {
+            getline(f, str[index], ' ');
+index++;
+        }
+
+The code above will cause all the elements of the array to have the same output, we need to use ++index, or just simply write getline(f, str[index++], ' ');
+
+The second problem I faced was the move constructor, When I added the move constructor to my program, and I run it, It caused an error. I read the error and it said that my copy constructor was deleted. Then after 1 hour, I realized that I wrote RecordSet(const RecordSet* value) instead of RecordSet(const RecordSet& value). Before adding the move constructor, the complier provided the default copy constructor, so my code run successfully that time. But when I added the move constructor, the copy constructor was deleted. This is because when we have a user-defined move constructor, C++ will delete the copy constructor (this was what I read from google). 
+
+The move object will be faster than copy object because we for the copy object, we create a copy version of the object. While the move object, we simply copy the address of the object and move the whole object to it. Code example:
+str = new std::string[noOfRec];
+            for (size_t i = 0; i < noOfRec; i++) {
+                str[i] = value.str[i];
+            }
+We see that we have to create a new dynamically allocation for the “str”. Then we copy everything from the parameter to it by using shallow and deep copy.
+str = value.str;
+            value.str = nullptr;
+            this->noOfRec = value.noOfRec;
+            value.noOfRec = 0;
+For this, we only copy the address so it is much faster.

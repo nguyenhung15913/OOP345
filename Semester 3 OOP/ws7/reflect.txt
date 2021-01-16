@@ -1,0 +1,5 @@
+Reflection
+In this workshop, what I have learnt so far is the use of algorithm library. I also did use vector to have a manageable array. 
+List of STL function I used were sort(), accumulate(), for_each(), any_of, and Copy_if(). I used for_each on displaying the list of collection songs. Any_of the return true or false whether the name of the artist is exist or not. I used sort to sort the collection based on title, album, and length. I used copy_if to get song for artist and use accumulate to calculate the total length of all song.
+The advantage of the STL algorithms is that use can code faster because the logic is already there for you. On top of that it will make your code cleaner and faster, and avoid you to create more variables.
+The sort collection can be modified by using try and catch. When client enter invalid field, we can throw an exception and catch it in the client side. 

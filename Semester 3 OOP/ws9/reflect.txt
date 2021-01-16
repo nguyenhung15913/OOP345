@@ -1,0 +1,4 @@
+In this workshop, what I have learnt so far is the use of thread and bind. On top of that, I did use the fstream library including ifstream for reading the file and ofstream to write on the file. I also review the material to know how to set up a new dynamic array. 
+The reason why we use binary file is that it will be more convenient. Storing value using numeric insteal of text will save a lot of memory. It all so makes you read the file faster. 
+Std::bind allows you to create many functors that can accept many argument types. In this workshop we can see that function converter() has many many arguments with different types (char*, char, int, Cryptors&)
+The advantage of using multithreading is that it helps you to operate multiparts of the programs at the same time. Definitely, splitting a program into multi parts will make the process run smoothly because we don’t put a ton of work into one task. 

@@ -1,0 +1,25 @@
+What I have learnt in this workshop is mostly the template. This has been the most difficult workshop so far. Mostly I was stuck with the syntax of the template. However, after a number of times revising the material as well as searching some information in Google, I completed the syntax without compilation errors. Then I had to understand thoroughly the main.cpp file in order to know the logic of the input of the file and how to display correct input. Set module will have an array and size of its, the array will have a pair of key and value, I had to always keep it in mind. Then I had to design a copy assignment in the Pair module to facilitate the purpose of operator+= in the PairSummable module that is when the condition is met, I will copy the parameter to the current object ( for example, line 45 of main.cpp, we add the record to products). The reason that we have to specialize the operator+=() is that when we K and V is string, we would like the initial value to an empty string and when V is an integer, the initial value would be 0. If we don’t have this specializations, the compiler won’t know how to initialize the value that suits our purpose. On top of that, when K and V are std::string, we want the function += to add the comma separate to our values stored, by default, the compiler won’t know that and it will add the values to the collection without comma. 
+PairSummable< std::string, std::string >& PairSummable<std::string, std::string>::operator+=(const PairSummable& item) {
+		std::string temp;
+		if (this->value() != "") {
+			temp = this->value() + ", " + item.value();
+		}
+		else
+		{
+			temp = item.value();
+		}
+		*this = PairSummable(this->key(), temp);
+		return *this;
+	}
+The reason we specializing the initial value for the summation is that we want the compiler to know that when it comes to situation like K and V are string, the value will be string and V is int, the value will be int. 
+std::string PairSummable<std::string, std::string>::initial = "";
+	int PairSummable<std::string, int>::initial = 0;
+We define static variables outside the class is that the static variables live within the life time of the module not only in the class themselves. 
+template <typename K, typename V>
+	size_t PairSummable<K, V>::minField = 0;
+
+	
+	std::string PairSummable<std::string, std::string>::initial = "";
+	int PairSummable<std::string, int>::initial = 0;
+Finally, I add some width so that my output is exactly like the expected output.
+

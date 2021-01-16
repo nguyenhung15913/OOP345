@@ -1,0 +1,68 @@
+Question 1:
+l-value: 1000
+r-value: 1060
+l-value: 55
+r-value:
+ Passenger Name = Henry
+ Passenger Type = 3
+
+l-value:
+ Passenger Name = Mary
+ Passenger Type = 0
+
+Question 2:
+template<typename T, typename N>
+class QueueItem {
+	T complain_type;
+	T customer_id;
+public:
+	QueueItem() { }
+	QueueItem(const T& aa, const T& bb)
+	{
+		complain_type = aa;
+		customer_id = bb;
+	}
+	const T& key() const { return complain_type; }
+	const T& value() const { return customer_id; }
+	void display(std::ostream& os) const
+	{
+		os << complain_type << ": " << customer_id << std::endl;
+	}
+};
+
+Question 3:
+#include <string>
+template<typename A, typename B>
+class GeometricObject
+{
+public:
+	GeometricObject();
+	GeometricObject(const A& color, B filled);
+	A getColor() const;
+	void setColor(const A& color);
+	B isFilled() const;
+	void setFilled(B filled);
+	A toString() const;
+private:
+	A color;
+	B filled;
+};
+template<typename A, typename B>
+class Rectangle : public GeometricObject<A, B>
+{
+public:
+	Rectangle();
+	Rectangle(double width, double height);
+	Rectangle(double width, double height,
+		const A& color, B filled);
+	double getWidth() const;
+	void setWidth(double);
+	double getHeight() const;
+	void setHeight(double);
+	double getArea() const;
+	double getPerimeter() const;
+	A toString() const;
+private:
+	double width;
+	double height;
+};

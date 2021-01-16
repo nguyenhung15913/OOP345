@@ -1,0 +1,2 @@
+﻿  main.cpp
+C:\Users\nguye\source\repos\Semester 3 OOP\Final\main.cpp(40): error C4716: 'Library::operator+=': must return a value

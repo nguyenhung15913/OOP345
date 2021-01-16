@@ -1,0 +1,14 @@
+﻿  Source.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\numeric(35,26): warning C4244: '=': conversion from 'double' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+C:\Users\nguye\source\repos\Semester 3 OOP\Final\partC\partc.h(35): message : see reference to function template instantiation '_Ty std::accumulate<std::_Vector_iterator<std::_Vector_val<std::_Simple_types<Device>>>,int,handleElectronics::<lambda_64edc81791c3e1990cde45dd4de8f79f>>(const _InIt,const _InIt,_Ty,_Fn)' being compiled
+          with
+          [
+              _Ty=int,
+              _InIt=std::_Vector_iterator<std::_Vector_val<std::_Simple_types<Device>>>,
+              _Fn=handleElectronics::<lambda_64edc81791c3e1990cde45dd4de8f79f>
+          ]
+  partC.vcxproj -> C:\Users\nguye\source\repos\Semester 3 OOP\Final\partC\Debug\partC.exe

@@ -1,0 +1,22 @@
+Reflection 
+In this workshop, I have learnt a lot of new knowledge, such as how to handle an array of pointers, how to store addresses to that array. On top of that handling input strings was very complicated.
+For part 1, the biggest problem was that I had to use many tool to handle the strings such as substr, erase, stoi, and find. Firstly I had to remove all leading space and trailing space at the beginning or ending of the strings stored. Then I use substr for the purpose of storing specific strings to the data members. Then I had to use erase to delete those specific strings for the next storage. After that I have to remove the space again and do the same things. Also, I have to find the comma separated, so that in my substr method, I can add it to the second parameter. To convert string to integer, I had to use stoi. The last problem was handling with the field width because, the email stored did not have the “<” “>” cover, and the setw only works with the next output field. That was the reason why I have to set a width that is equal to the length of the email: size_t width = value.email.length(); then when I display I can use something like this to get the required output: os  << value.email << left  << setw(24 - width) <<">”. 
+The second part was more complicated. I had to handle with the array of pointers. I had to read through all the notes in Seneca ICT as well as some research on Google. Then I had to check and understand the main.cpp. It is lucky that in the main.cpp , there was a hint for the creation of the dynamically array of pointers: ppReservations = new sdds::Reservation*[cnt]; But that was not the problem, I kept getting error event I use the above code to create a new dynamically allocation, Then I realized that the data member of the ConfirmationSender had the const: const sdds::Reservation** sender; so I add the const after the new keyword and it worked perfectly. 
+The next problem was dealing with operator +=. I had to create a temporary static array of pointers because I have to resize the dynamic array every time an address is added to the array, and every time we want to resize the dynamic array, we have to delete it then the stored address will be deleted. 
+const Reservation* senderTemp[20] = {nullptr};
+for (size_t i = 0; i < size; i++) {
+			senderTemp[i] = sender[i]; // stored information to new temp array
+				}
+				++size; // resize
+				sender = new const Reservation * [size]; // resize
+				for (size_t i = 0; i < 20; i++) {
+					if (senderTemp[i] == nullptr) {
+						senderTemp[i] = &res; // res is the parameter
+					}
+				}
+				for (size_t i = 0; i < size; i++) {
+				sender[i] = senderTemp[i]; // copy again Temp sender to sender
+				}
+Then the operator -= was not complicated, I just needed to find the address and set the element to nullptr then resize the array.
+The different between the composition is that, the composition needs to complete the ownership
+The aggregation can be implemented completely whether the objects that it uses exist or not. 

@@ -1,0 +1,12 @@
+In this workshop, what I have learnt so far is how to use lambda function, how to catch and handle error. On top of that, I learnt how to use more string function such as str.replace. Another interesting thing is the overload () operator. For example: 
+template<typename T>
+		void fixSpelling(T spellChecker) {
+			spellChecker(m_title);
+			spellChecker(m_des);
+		}
+We can see that we call the () operator for spellChecker on m_title. This is also an aggregation because the SpellChecker class and Movies don’t know each other. 
+
+the constructor for SpellChecker generates an exception in certain conditions. To change my code but still have the same result, firstly, I will delete the throw exception in the SpellChecker constructor, leave it blank when file cannot be read. The in the client side, in the catch, I will pass std::exception& e as the argument. Then inside catch I will cout << “EXCEPTION: ” << e.what() << endl;
+the classes Movie and Book contain almost identical logic in loading data from the file. I will create a Util module, and write a function that will load the file and trim the string inside it. Then I will call that function on the Movie and Book modules.
+the classes Movie and Book are instantiated from the main() function using a custom constructor, but they also contain a default constructor. The default constructor here is necessary and could not be removed. This is because, if we don’t define user default constructor, the c++ will create for us one. In this case, we want our default constructor operates our purpose so we need to create it. 
+A functor is defined outside the main.cpp file while a lambda can be created anywhere like inside the main.cpp or inside the function as a call back. We want to use lambda when we use want to create a function without a name or just to calculate somethings simple. 

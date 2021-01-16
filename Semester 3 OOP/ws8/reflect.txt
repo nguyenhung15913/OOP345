@@ -1,0 +1,23 @@
+In this workshop, I have learnt about the use of raw pointer and smart pointer from memory library. I also have to understand the codes so I have to look back at Seneca ICT to review lectures such as vector, list,… 
+The advantage of smart pointer is that the smart pointer can manage the memory area that it points to. When we create a dynamically allocation and after that, when the pointer is going out of the scope, it will destruct or destroy the dynamic memory automatically and prevent any memory leaks.
+Example: 
+List<Product> mergeSmart(const List<Description>& desc, const List<Price>& price) {
+		List<Product> priceList;
+		// TODO: Add your code here to build a list of products
+		//         using smart pointers
+		for (auto i = 0; i < desc.size(); i++)
+		{
+			for (auto k = 0; k < price.size(); k++)
+			{
+				if (desc[i].code == price[k].code)
+				{
+					std::unique_ptr<Product> product( new Product(desc[i].desc, price[k].price));
+					product->validate();
+					priceList += product;
+				}
+			}
+		}
+
+		return priceList;
+	}
+The difference between raw pointer and smart pointer is that when we create a dynamically allocation. When we use raw pointer, we have to delete it after use. However, the smart pointer will delete the dynamically allocation automatically.

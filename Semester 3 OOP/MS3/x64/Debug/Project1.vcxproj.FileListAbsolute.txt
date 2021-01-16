@@ -1,0 +1,2 @@
+C:\Users\nguye\source\repos\Semester 3 OOP\MS3\x64\Debug\Project1.exe
+C:\Users\nguye\source\repos\Semester 3 OOP\MS3\x64\Debug\Project1.pdb
